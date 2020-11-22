@@ -1654,3 +1654,8 @@ body {
   }
 }
 /*# sourceMappingURL=dist/css/mc-portal.css.map */
+
+.quickstart{
+  text-align: center;
+  color:darkgrey;
+}
