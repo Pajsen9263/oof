@@ -65,12 +65,25 @@
             </div>
 					</div>
 			</div>
-<form method=”POST” action=”http://formspree.io/your-email-address-goes-here">
-<input type=”email” name=”email” placeholder=”Email”>
-<input type=”text” name=”first name” value=”” placeholder=”First Name”>
-<input type=”text” name=”last name” value=”” placeholder=”Last Name”>
-<textarea name=”message” placeholder=”Your Message”></textarea>
-<button type=”submit”>Send</button>
+
+<!-- modify this form HTML and place wherever you want your form -->
+
+<form
+  action="https://formspree.io/f/mjvpebob"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+
+  <!-- your other form fields go here -->
+
+  <button type="submit">Send</button>
 </form>
 			<!-- /.container -->
         <div class="container">
