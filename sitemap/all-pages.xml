@@ -1,0 +1,36 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link"/>
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link"/>
+<style lang="en" type="text/css" id="dark-mode-custom-style"/>
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://redstoneanarchy.github.io/</loc>
+<lastmod>2020-11-23T08:56:20+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://redstoneanarchy.github.io/home/</loc>
+<lastmod>2020-11-23T08:56:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://redstoneanarchy.github.io/home/shop/</loc>
+<lastmod>2020-11-23T08:56:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://redstoneanarchy.github.io/home/vote/</loc>
+<lastmod>2020-11-23T08:56:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://redstoneanarchy.github.io/home/rules/</loc>
+<lastmod>2020-11-23T08:56:20+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://redstoneanarchy.github.io/home/staff/</loc>
+<lastmod>2020-11-23T08:56:20+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+</urlset>
