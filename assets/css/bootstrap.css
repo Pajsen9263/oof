@@ -364,6 +364,9 @@ th {
 .glyphicon-home:before {
   content: "\e021";
 }
+.glyphicon-contact:before {
+  content: "\e0277";
+}
 .glyphicon-file:before {
   content: "\e022";
 }

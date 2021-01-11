@@ -1,0 +1,271 @@
+
+<!-- THIS IS A SCRIPTED WEB PAGE.
+Download it and save it as "NetherPortal.html",
+then open it with your browser to make it work! -->
+
+<html>
+    <head>
+        <title>Nether Portal Calculator v1.0 by D3Phoenix</title>
+    </head>
+      <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <!-- MyMC CSS -->
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link href="../../assets/css/mymc.css" rel="stylesheet">
+    <body bgcolor="silver">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                <a class="navbar-brand" href="https://redstoneanarchy.github.io">RedstoneAnarchy</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="https://redstoneanarchy.github.io/home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="home/rules"><i class="fa fa-info-circle"></i> Rules</a></li>
+                    <li><a href="home/staff"><i class="fa fa-star"></i> Staff</a></li>
+                    <li><a href="home/vote"><i class="fa fa-check"></i> Vote</a></li>
+                    <li><a href="home/contact"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Circle-icons-chat.svg/768px-Circle-icons-chat.svg.png" width="25"> Contact</a></li>
+                    <li>
+                        <a href="https://discord.gg/eZ99zHetxZ" target="_blank"><img src="https://discord.com/assets/93608abbd20d90c13004925014a9fd01.svg" width="70"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+      
+        <hr />
+        <h3>Coordinate Calculator: <font color="green">Overworld</font> Source to <font color="red">Nether</font> Destination</h3>
+        <form name="OtoN">
+            <table border="4">
+                <tr>
+                    <th colspan="3">Overworld Coordinates</th>
+                    <th></th>
+                    <th colspan="3">Nether Coordinates</th>
+                </tr>
+                <tr>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                    <th width="25"></th>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="SrcX" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcY" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcZ" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><center><b>--&gt;</b></center></td>
+                    <td><input type="text" name="DstX" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstY" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstZ" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                </tr>
+                
+                    <td colspan="7"><input type="button" name="OtoN_Reset" value="Reset" style="width: 100%;" onclick="ClearOtoN()"></td>
+            </table>
+            <script type="text/javascript">
+                <!--
+                function CalcOtoN()
+                {
+                    var sx, sy, sz;
+
+                    sx = parseInt(document.OtoN.SrcX.value);
+                    sy = parseInt(document.OtoN.SrcY.value);
+                    sz = parseInt(document.OtoN.SrcZ.value);
+
+                    if ((sy > 123) || (sy < 1))
+                        document.OtoN.SrcY.style.background = "#FF8080";
+                    else
+                        document.OtoN.SrcY.style.background = "#FFFFFF";
+
+                    document.OtoN.DstX.value = Math.floor(sx / 8);
+                    document.OtoN.DstY.value = sy;
+                    document.OtoN.DstZ.value = Math.floor(sz / 8);
+                }
+
+                function ClearOtoN()
+                {
+                    document.OtoN.SrcX.value = "0";
+                    document.OtoN.SrcY.value = "0";
+                    document.OtoN.SrcZ.value = "0";
+                    document.OtoN.DstX.value = "0";
+                    document.OtoN.DstY.value = "0";
+                    document.OtoN.DstZ.value = "0";
+                    document.OtoN.SrcY.style.background = "#FFFFFF";
+                }
+
+                function isNumberKey(e)
+                {
+                    var chr = (e.which) ? e.which : e.keyCode
+                    if ( (chr <= 57) || (chr == 189) )
+                        return true;
+                    return false;
+                }
+                //-->
+            </script>
+        </form>
+        <hr />
+        <h3>Coordinate Calculator: <font color="red">Nether</font> Source to <font color="green">Overworld</font> Destination</h3>
+        <form name="NtoO">
+            <table border="4">
+                <tr>
+                    <th colspan="3">Nether Coordinates</th>
+                    <th></th>
+                    <th colspan="3">Overworld Coordinates</th>
+                </tr>
+                <tr>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                    <th width="25"></th>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="SrcX" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcY" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcZ" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><center><b>--&gt;</b></center></td>
+                    <td><input type="text" name="DstX" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstY" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstZ" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                </tr>
+                    <td colspan="7"><input type="button" name="NtoO_Reset" value="Reset" style="width: 100%;" onclick="ClearNtoO()"></td>
+            </table>
+            <script type="text/javascript">
+                <!--
+                function CalcNtoO()
+                {
+                    var sx, sy, sz;
+
+                    sx = parseInt(document.NtoO.SrcX.value);
+                    sy = parseInt(document.NtoO.SrcY.value);
+                    sz = parseInt(document.NtoO.SrcZ.value);
+
+                    if ((sy > 123) || (sy < 1))
+                        document.NtoO.SrcY.style.background = "#FF8080";
+                    else
+                        document.NtoO.SrcY.style.background = "#FFFFFF";
+
+                    document.NtoO.DstX.value = (sx * 8);
+                    document.NtoO.DstY.value = sy;
+                    document.NtoO.DstZ.value = (sz * 8);
+                }
+
+                function ClearNtoO()
+                {
+                    document.NtoO.SrcX.value = "0";
+                    document.NtoO.SrcY.value = "0";
+                    document.NtoO.SrcZ.value = "0";
+                    document.NtoO.DstX.value = "0";
+                    document.NtoO.DstY.value = "0";
+                    document.NtoO.DstZ.value = "0";
+                    document.NtoO.SrcY.style.background = "#FFFFFF";
+                }
+
+                function isNumberKey(e)
+                {
+                    var chr = (e.which) ? e.which : e.keyCode
+                    if ( (chr <= 57) || (chr == 189) )
+                        return true;
+                    return false;
+                }
+                //-->
+            </script>
+        </form>
+        <hr />
+        <h3>3D Distance Calculator:</h3>
+        <form name="Dist">
+            <table border="4">
+                <tr>
+                    <th colspan="3">Location 1</th>
+                    <th></th>
+                    <th colspan="3">Location 2</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th width="50">X<sub>1</sub></th>
+                    <th width="50">Y<sub>1</sub></th>
+                    <th width="50">Z<sub>1</sub></th>
+                    <th></th>
+                    <th width="50">X<sub>2</sub></th>
+                    <th width="50">Y<sub>2</sub></th>
+                    <th width="50">Z<sub>2</sub></th>
+                    <th></th>
+                    <th width="50">Distance</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="X1" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcDist()" onfocus="this.select()"></td>
+                    <td><input type="text" name="Y1" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcDist()" onfocus="this.select()"></td>
+                    <td><input type="text" name="Z1" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcDist()" onfocus="this.select()"></td>
+                    <td></td>
+                    <td><input type="text" name="X2" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcDist()" onfocus="this.select()"></td>
+                    <td><input type="text" name="Y2" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcDist()" onfocus="this.select()"></td>
+                    <td><input type="text" name="Z2" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcDist()" onfocus="this.select()"></td>
+                    <td></td>
+                    <td><input type="text" name="D1"  size="5" value="0" style="text-align: center; width: 100%; background-color: silver;" onkeyup="CalcDist()"></td>
+                </tr>
+                <tr>
+                    <td colspan="9"><input type="button" name="Dist_Reset" value="Reset" style="width: 100%;" onclick="ClearDist()"></td>
+                </tr>
+            </table>
+            <script type="text/javascript">
+                <!--
+                function CalcDist()
+                {
+                    var dx, dy, dz, result;
+
+                    dx = parseInt(document.Dist.X2.value) - parseInt(document.Dist.X1.value);
+                    dy = parseInt(document.Dist.Y2.value) - parseInt(document.Dist.Y1.value);
+                    dz = parseInt(document.Dist.Z2.value) - parseInt(document.Dist.Z1.value);
+
+                    result = Math.sqrt(Math.pow(dx,2) + Math.pow(dy,2) + Math.pow(dz,2));
+
+                    document.Dist.D1.value = result;
+
+                    if (result <= 33)
+                        document.Dist.D1.style.background = "#FF8080";
+                    else
+                        document.Dist.D1.style.background = "silver";
+                }
+
+                function ClearDist()
+                {
+                    document.Dist.X1.value="0";
+                    document.Dist.Y1.value="0";
+                    document.Dist.Z1.value="0";
+                    document.Dist.X2.value="0";
+                    document.Dist.Y2.value="0";
+                    document.Dist.Z2.value="0";
+                    document.Dist.D1.value="0";
+                    document.Dist.D1.style.background = "silver";
+                }
+
+                //-->
+            </script>
+        </form>
+        <hr />
+        <br />
+        <br />
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a>&nbsp;<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Nether Portal Calculator v1.0</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">D3Phoenix</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+    </body>
+</html>
+<style>
+  body{
+    background-color: #00ff00;
+  }
+
+</style>
